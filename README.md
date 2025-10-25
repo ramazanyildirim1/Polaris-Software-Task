@@ -19,7 +19,7 @@ Visual Studio Code (recommended)
 
 Clone the repository and install all required packages:
 
-git clone <my-repo-url>
+git clone :  https://github.com/ramazanyildirim1/Polaris-Software-Task.git
 cd practice-software-testing
 npm install
 
