@@ -36,12 +36,12 @@ npx playwright test
 npx playwright show-report
 
 Project Structure
-POLARIS SOFTWARE TASK/
-├── node_modules/         
+polaris-software-task/
+├── node_modules/       (ignored by Git)
 ├── pages/
 │   ├── basePage.ts
 │   ├── cardPage.ts
-│   ├── editpage.ts
+│   ├── editPage.ts
 │   ├── homePage.ts
 │   ├── loginPage.ts
 │   ├── ordersPage.ts
@@ -49,7 +49,7 @@ POLARIS SOFTWARE TASK/
 ├── tests/
 │   └── testCases.spec.ts
 ├── utils/
-│   ├── constant.ts
+│   ├── constants.ts
 │   └── env.config.ts
 ├── package.json
 ├── playwright.config.ts
