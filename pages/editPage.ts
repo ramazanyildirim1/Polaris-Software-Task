@@ -54,7 +54,7 @@ export default class EditPage extends BasePage {
     }
 
     async verifyPaymentMethodIsDisplayed(): Promise<void> {
-        await expect(this.paymentMethod).toBeVisible();
+        await this.expectVisible(this.paymentMethod);
         await expect(await this.paymentMethod.inputValue()).not.toBe("");
     }
 

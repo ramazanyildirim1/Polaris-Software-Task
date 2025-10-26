@@ -57,7 +57,7 @@ polaris-software-task/
 
 import { defineConfig, devices } from '@playwright/test';
 
-const baseUrl =  process.env.SITE_VERSION === 'buggy'    ? 'https://with-bugs.practicesoftwaretesting.com'    : 'https://practicesoftwaretesting.com';
+const baseUrl =  process.env.SITE_VERSION === 'buggy'    ? 'https://with-bugs.practicesoftwaretesting.com' : 'https://practicesoftwaretesting.com';
 export default defineConfig({
   testDir: './tests',
   reporter: 'html',
@@ -83,19 +83,19 @@ The goal of testing was to validate key user flows such as browsing products, vi
 During testing, a critical routing issue was observed — clicking the Home button redirects users to the Contact page across multiple areas of the website.
 This issue causes most of the functional scenarios to fail.
 
-| #  | Test Scenario                    | Expected Behavior                            | Actual Behavior             | Status   |
-| -- | -------------------------------- | -------------------------------------------- | --------------------------- | -------- |
-| 1  | **Visitor views tools list**     | Homepage should show available tools         | Homepage opens Contact page | Failed   |
-| 2  | **View tool details**            | All products should display on Products page | Not all products appear     | Failed   |
-| 3  | **Search product by name**       | Product should appear in search results      | Search fails for some items | Failed   |
-| 4  | **Filter by category (visitor)** | Category checkbox filters products           | Category checkbox missing   | Failed   |
-| 5A | **Registered user login**        | Login should redirect to dashboard           | Homepage opens Contact page | Failed   |
-| 5B | **Invalid credentials**          | Should display proper error message          | Works as expected           | Passed   |
-| 6  | **Add to cart**                  | Product added successfully                   | Homepage opens Contact page | Failed   |
-| 7  | **Update / remove items**        | Items should update or delete in cart        | Homepage opens Contact page | Failed   |
-| 8  | **Checkout**                     | User should complete order successfully      | Homepage opens Contact page | Failed   |
-| 9  | **View past orders**             | Previous orders should be displayed          | Homepage opens Contact page | Failed   |
-| 10 | **Category filter**              | Filter checkboxes available                  | Not visible                 | Failed   |
+| #  | Test Scenario                    | Expected Behavior                            | Actual Behavior             | Status      |
+| -- | -------------------------------- | -------------------------------------------- | --------------------------- | --------    |
+| 1  | **Visitor views tools list**     | Homepage should show available tools         | Homepage opens Contact page | ❌ Failed   |
+| 2  | **View tool details**            | All products should display on Products page | Not all products appear     | ❌ Failed   |
+| 3  | **Search product by name**       | Product should appear in search results      | Search fails for some items | ❌ Failed   |
+| 4  | **Filter by category (visitor)** | Category checkbox filters products           | Category checkbox missing   | ❌ Failed   |
+| 5A | **Registered user login**        | Login should redirect to dashboard           | Homepage opens Contact page | ❌ Failed   |
+| 5B | **Invalid credentials**          | Should display proper error message          | Works as expected           | ✅ Passed   |
+| 6  | **Add to cart**                  | Product added successfully                   | Homepage opens Contact page | ❌ Failed   |
+| 7  | **Update / remove items**        | Items should update or delete in cart        | Homepage opens Contact page | ❌ Failed   |
+| 8  | **Checkout**                     | User should complete order successfully      | Homepage opens Contact page | ❌ Failed   |
+| 9  | **View past orders**             | Previous orders should be displayed          | Homepage opens Contact page | ❌ Failed   |
+| 10 | **Category filter**              | Filter checkboxes available                  | Not visible                 | ❌ Failed   |
 
 
 Key Observations
@@ -116,4 +116,4 @@ Author
 Tester: Ramazan Yildirim
 Framework: Playwright + TypeScript
 Date: October 2025
-Website Tested: Practice Software Testing (with-bugs)
+Websites Tested: Practice Software Testing  and Practice Software Testing(with-bugs) 
